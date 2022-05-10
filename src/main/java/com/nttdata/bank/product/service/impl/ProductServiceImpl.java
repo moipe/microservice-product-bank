@@ -8,6 +8,7 @@ import com.nttdata.bank.product.repository.ProductRepository;
 import com.nttdata.bank.product.service.ProductService;
 
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 @Service
 public class ProductServiceImpl implements ProductService{
@@ -18,6 +19,11 @@ public class ProductServiceImpl implements ProductService{
 	@Override
 	public Flux<Product> findAll() {
 		return productRepository.findAll();
+	}
+
+	@Override
+	public Mono<Product> findById(String id) {
+		return productRepository.findById(id);
 	}
 
 }
