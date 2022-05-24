@@ -18,10 +18,25 @@ public class Product {
 	
 	private String name;
 	
-	private String type;
+		/* TYPE */
+	//1 - Ahorro
+	//2 - Cuenta corriente
+	//3 - Plazo fijo
+	//4 - Tarjeta de crédito
+	private Byte type;
 	
-	private String category;
+		/* CATEGORY */
+	//1 - Pasivo
+	//2 - Activo
+	//3 - VIP
+	//4 - PYME
+	private Byte category;
 	
-	private Double commission;
-
+	private String description;
+	
+	private Float commissionMaintenance;
+	
+	private Byte maxTransactions;
+	
+	private Float commissionTransaction;
 }
